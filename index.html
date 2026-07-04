@@ -790,7 +790,7 @@ function startTimer(exId){
       clearInterval(state.timers[exId]);
       delete state.timers[exId];
       if(disp) disp.textContent = 'Done ✓';
-      try{ if(navigator.vibrate) navigator.vibrate([120,60,120]); }catch(e){}
+      try{ if(navigator.vibrate) navigator.vibrate([1000]); }catch(e){}
       setTimeout(function(){ var d2=document.getElementById('restDisp-'+exId); if(d2) d2.textContent=''; }, 2200);
     } else {
       updateRestDisplay(disp, remaining);
